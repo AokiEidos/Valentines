@@ -66,7 +66,7 @@
 			<span class="comments"># 如果你想保护世界, </span><br/>
 			<span class="comments"># 我希望能一直在你身边守护你.</span><br/>
 			<span class="comments"># 如果你想独善其身, </span><br/>
-			<span class="comments"># 我希望能分享自己的全部给你.</span><br/>
+			<span class="comments"># 我希望能分享自己的世界给你.</span><br/>
 			<span class="comments"># I love you.</span><br/>
 		
 		</div>
@@ -89,20 +89,25 @@
 	    src="http://music.163.com/song/media/outer/url?id=26237342.mp3">
 </audio>
 <script type="text/javascript">
-function audioAutoPlay() {
-    wx.config({
-        debug: false,
-        appId: '',
-        timestamp: 1,
-        nonceStr: '',
-        signature: '',
-        jsApiList: []
-    });
-    wx.ready(function() {
-        document.getElementById('bgmusic').play();
-    });
-}
-audioAutoPlay();
+    function audioAutoPlay(id) {
+        var audio = document.getElementById(id);
+
+        if (window.WeixinJSBridge) {
+            WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
+                audio.play();
+            }, false);
+        } else {
+            document.addEventListener("WeixinJSBridgeReady", function () {
+                WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
+                    audio.play();
+                });
+            }, false);
+        }
+        audio.play();
+
+        return false;
+    }
+    audioAutoPlay('bgmusic');
 </script>
 <script type="text/javascript">
 	var offsetX = $("#loveHeart").width() / 2;
