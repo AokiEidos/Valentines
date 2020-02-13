@@ -14,7 +14,7 @@
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/garden.js"></script>
 	<script type="text/javascript" src="js/functions.js"></script>
-        <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 </head>
 
 <body>
@@ -78,7 +78,7 @@
 					<div id="elapseClock"></div>
 				</div>
 				<div id="loveu">
-					Wish you can be happy.<br/>
+					Wish you alway be happy.<br/>
 					<div class="signature">- Bin Gao | Beijing</div>
 				</div>
 			</div>
@@ -88,21 +88,21 @@
 <audio id="bgmusic" autoplay="autoplay" loop="loop" preload="auto"
 	    src="../demo/music/Cry for the moon.mp3">
 </audio>
-<script>
-function autoPlayAudio1() {
-  wx.config({
-    debug: false,
-    appId: '',
-    timestamp: 1,
-    nonceStr: '',
-    signature: '',
-    jsApiList: []
-  });
-  wx.ready(function() {
-    document.getElementById('bgmusic').play();
-  });
+<script type="text/javascript">
+function audioAutoPlay() {
+    wx.config({
+        debug: false,
+        appId: '',
+        timestamp: 1,
+        nonceStr: '',
+        signature: '',
+        jsApiList: []
+    });
+    wx.ready(function() {
+        document.getElementById('bgmusic').play();
+    });
 }
-autoPlayAudio1();
+audioAutoPlay();
 </script>
 <script type="text/javascript">
 	var offsetX = $("#loveHeart").width() / 2;
