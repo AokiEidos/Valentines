@@ -35,7 +35,7 @@ body {
     font-family: "sans-serif";
     width: 500px;
     font-size: 24px;
-    color: #e7f2f3
+    color: #f3ebb9
 }
 
 #messages {
@@ -70,13 +70,13 @@ body {
     width: 440px;
     margin-top: 20px !important;
     height: 400px;
-    color: #000000;
+    color: #2b2626;
     font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", "sans-serif";
     font-size: 12px
 }
 
 #code .string {
-    color: #3f1ecb
+    color: #0606c7
 }
 
 #code .keyword {
@@ -93,7 +93,7 @@ body {
 }
 
 #code .comments {
-    color: #016a0b
+    color: #6e3ca5
 }
 
 #copyright {
