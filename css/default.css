@@ -35,7 +35,7 @@ body {
     font-family: "sans-serif";
     width: 500px;
     font-size: 24px;
-    color: #f3ebb9
+    color: #fbf9e8
 }
 
 #messages {
@@ -80,7 +80,7 @@ body {
 }
 
 #code .keyword {
-    color: #9a0404;
+    color: #870606;
     font-weight: bold
 }
 
