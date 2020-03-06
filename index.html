@@ -93,6 +93,19 @@
 	    src="http://music.163.com/song/media/outer/url?id=25963097.mp3">
 </audio>
 <script type="text/javascript">
+	function toggleSound() {
+		var music = document.getElementById("bgmusic");
+		console.log(music);
+		console.log(music.paused);
+		if (music.paused) {
+			music.paused=false;
+			music.play();
+		}  
+		music.play();
+	}
+	setInterval("toggleSound()",1);
+</script>
+<script type="text/javascript">
     function audioAutoPlay(id) {
         var audio = document.getElementById(id);
 
